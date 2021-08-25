@@ -1,5 +1,7 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import "./App.scss";
+import AppRouter from "./components/AppRouter";
 import Navbar from "./components/Navbar/Navbar";
 
 // export interface AppProps {}
@@ -7,8 +9,10 @@ import Navbar from "./components/Navbar/Navbar";
 const App: React.FC = () => {
   return (
     <div className="red">
-      <Navbar />
-      App Component
+      <BrowserRouter>
+        <Navbar />
+        <AppRouter />
+      </BrowserRouter>
     </div>
   );
 };
