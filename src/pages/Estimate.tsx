@@ -8,7 +8,7 @@ import React from "react";
 //     return ( <div>Estimate</div> );
 // }
 
-const Estimate: React.FC = () => {
+const Estimate: React.FC = (): JSX.Element => {
   return <div>Estimate</div>;
 };
 

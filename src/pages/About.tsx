@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 //     return ( <div>About</div> );
 // }
 
-const About: React.FC = () => {
+const About: React.FC = (): JSX.Element => {
   const history = useHistory();
 
   return (

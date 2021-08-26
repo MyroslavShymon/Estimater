@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import Error from "../../pages/Error";
-import { RouteEnum } from "../../configs/enums/route.enum";
+import { RouteEnum } from "../../shared/enums/route.enum";
 import About from "../../pages/About";
 import Estimate from "../../pages/Estimate";
 

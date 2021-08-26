@@ -1,8 +1,7 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { routers, RouteType } from "../core/router/index";
-import { RouteEnum } from "../configs/enums/route.enum";
-import Error from "../pages/Error";
+import { RouteEnum } from "../shared/enums/route.enum";
 // import Error from "../pages/Error";
 // export interface AppRouterProps {}
 

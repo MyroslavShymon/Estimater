@@ -1,0 +1,35 @@
+.menu {
+  &__item {
+    font-weight: bold;
+    transition: 0.2s all ease-in;
+    cursor: pointer;
+    &:hover {
+      transition: 0.2s all ease-in;
+      background: rgba($secondary, 20%);
+    }
+  }
+  &__link {
+    height: 37px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s all ease-in;
+    color: $text-primary;
+    &:hover {
+      transition: 0.2s all ease-in;
+      color: $secondary;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        background-color: $secondary;
+        width: 5px;
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+  &__icon {
+    margin: 0 15px 0 20px;
+  }
+}
