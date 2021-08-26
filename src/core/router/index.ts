@@ -1,8 +1,8 @@
 import { FunctionComponent } from "react";
-import Error from "../../pages/Error";
+import Error from "../../modules/Error";
 import { RouteEnum } from "../../shared/enums/route.enum";
-import About from "../../pages/About";
-import Estimate from "../../pages/Estimate";
+import About from "../../modules/About";
+import Estimate from "../../modules/Estimate/Estimate";
 
 export type RouteType = {
   path: string;

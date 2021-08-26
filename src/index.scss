@@ -1,16 +1,5 @@
 @import "./shared/styles";
 
-/*:export {
-  color-dark: $dark;
-  color-white: $white;
-  color-primary: $primary;
-  color-secondary: $secondary;
-  color-success: $success;
-  color-danger: $danger;
-  color-warning: $warning;
-  text-color-dark-grey: $warning;
-}*/
-
 body {
   padding: 0;
   margin: 0;
@@ -24,13 +13,5 @@ img {
   height: auto;
 }
 a {
-  text-decoration: none;
   color: $white;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style: none;
 }

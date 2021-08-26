@@ -11,7 +11,7 @@ const Logo: React.FC<LogoProps> = ({ title, link }): JSX.Element => {
   return (
     <NavLink to={link} className={classes["logo-wrapper"]}>
       {/* <img src={logo} alt="logo" className={classes.logo} /> */}
-      {title}
+      <h1>{title}</h1>
     </NavLink>
   );
 };
