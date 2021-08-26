@@ -45,6 +45,16 @@ module.exports = [
         options: { modules: true },
       },
       "sass-loader",
+      {
+        loader: require.resolve("sass-resources-loader"),
+        options: {
+          resources: ["src/shared/styles/variables/index.scss"],
+        },
+      },
     ],
+  },
+  {
+    test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg|webp)(\?[a-z0-9=.]+)?$/,
+    loader: "file-loader",
   },
 ];

@@ -17,9 +17,6 @@ const AppRouter: React.FC = (): JSX.Element => {
           exact={route.exact}
         />
       ))}
-      {/* <Route path="/error">
-        <Error />
-      </Route> */}
       <Redirect to={RouteEnum.Error} />
     </Switch>
   );

@@ -1,4 +1,54 @@
 .navbar {
   display: flex;
-  background: rgb(146, 142, 82);
+  flex-direction: column;
+  background: rgb(12, 116, 38);
+  &__avatar {
+    border-radius: 15px;
+    max-width: 40%;
+    &-setting {
+      position: absolute;
+      top: -10px;
+      right: 65px;
+    }
+    &-wrapper {
+      display: flex;
+      position: relative;
+      justify-content: center;
+    }
+  }
+  &__user {
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  &__user {
+    &-info {
+      margin: 10px 0 40px 0;
+      text-align: center;
+    }
+    &-name {
+      color: #{$primary};
+      font-weight: bold;
+    }
+    &-email {
+      color: #{$primary};
+      font-size: 13px;
+      font-weight: 300;
+    }
+  }
+  &__menu {
+  }
+}
+.menu {
+  &__item {
+    background: red;
+    padding: 14px 0;
+  }
+  &__link {
+  }
+  &__icon {
+  }
 }

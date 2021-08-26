@@ -18,6 +18,8 @@ module.exports = {
       ".json",
       ".scss",
       ".sass",
+      ".webp",
+      ".png",
     ],
   },
 };
