@@ -1,6 +1,5 @@
 .navbar {
-  display: flex;
-  flex-direction: column;
+  @include flex($direction: column);
   background: $primary;
   position: fixed;
   top: 0;

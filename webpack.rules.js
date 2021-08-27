@@ -48,7 +48,7 @@ module.exports = [
       {
         loader: require.resolve("sass-resources-loader"),
         options: {
-          resources: ["src/shared/styles/variables/index.scss"],
+          resources: ["src/shared/styles/index.scss"],
         },
       },
     ],

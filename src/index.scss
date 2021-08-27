@@ -5,7 +5,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: darken($primary, 10%);
-  color: $white;
+  color: $text-primary;
   font-family: "Roboto Condensed", sans-serif;
 }
 img {
@@ -13,5 +13,5 @@ img {
   height: auto;
 }
 a {
-  color: $white;
+  color: $text-primary;
 }

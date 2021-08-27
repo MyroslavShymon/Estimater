@@ -1,21 +1,20 @@
 .menu {
   &__item {
+    @include transition();
     font-weight: bold;
-    transition: 0.2s all ease-in;
     cursor: pointer;
     &:hover {
-      transition: 0.2s all ease-in;
+      @include transition();
       background: rgba($secondary, 20%);
     }
   }
   &__link {
+    @include flex($align: center);
+    @include transition();
     height: 37px;
-    display: flex;
-    align-items: center;
-    transition: 0.2s all ease-in;
-    color: $text-primary;
+    color: $text-secondary;
     &:hover {
-      transition: 0.2s all ease-in;
+      @include transition();
       color: $secondary;
       position: relative;
       &::before {

@@ -23,6 +23,7 @@ const Navbar: React.FC = (): JSX.Element => {
             link={navbarItem.link}
             icon={navbarItem.icon}
             title={navbarItem.title}
+            key={navbarItem.title}
           />
         ))}
       </ul>

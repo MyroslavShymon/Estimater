@@ -1,0 +1,44 @@
+.form-control {
+  transition: 0.25s border ease-in-out;
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
+  color: $text-primary;
+  border: 0;
+  border-bottom: 2px solid $text-dark-grey;
+  font-size: 20px;
+  padding: 0 4px;
+  margin: 0 10px;
+  &-wrapper {
+    position: relative;
+  }
+  &:focus {
+    border-bottom-color: $secondary;
+  }
+
+  &:not(.touched) + .floater:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    color: $text-light-grey;
+    pointer-events: none;
+    transition: 0.25s all ease-in-out;
+  }
+
+  &.touched + .floater:before,
+  &:focus + .floater:before,
+  &:not(:placeholder-shown) + .floater:before {
+    position: absolute;
+    top: -20px;
+    font-size: 14px;
+    color: $text-primary;
+  }
+
+  & + .floater:before,
+  &:focus + .floater:before {
+    margin: 0 10px;
+    content: attr(data-title);
+  }
+}

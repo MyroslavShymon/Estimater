@@ -1,6 +1,6 @@
 .navbar {
   &__avatar {
-    border-radius: 15px;
+    @extend %border-radius;
     max-width: 35%;
     &-setting {
       position: absolute;
@@ -8,17 +8,13 @@
       right: 65px;
     }
     &-wrapper {
-      display: flex;
+      @include flex($justify: center);
       position: relative;
-      justify-content: center;
     }
   }
   &__user {
     &-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      @include flex($align: center, $justify: center, $direction: column);
       margin: 15px 0 0 0;
     }
   }
@@ -31,7 +27,7 @@
       font-weight: bold;
     }
     &-email {
-      color: $text-primary;
+      color: $text-secondary;
       font-size: 13px;
       font-weight: 300;
       margin: 4px 0 0 0;
