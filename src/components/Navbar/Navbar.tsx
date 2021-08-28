@@ -9,13 +9,13 @@ import UserInfo from "./UserInfo/UserInfo";
 
 const Navbar: React.FC = (): JSX.Element => {
   const [navbarItems, setNavbarItems] = useState([
-    { title: "Estimate", link: RouteEnum.Estimate, icon: faCalculator },
+    { title: "Estimate", link: RouteEnum.Estimates, icon: faCalculator },
     { title: "About", link: RouteEnum.About, icon: faCalculator },
   ]);
 
   return (
     <div className={classes.navbar}>
-      <Logo title="Estimater" link={RouteEnum.Estimate} />
+      <Logo title="Estimater" link={RouteEnum.Estimates} />
       <UserInfo />
       <ul>
         {navbarItems.map((navbarItem) => (

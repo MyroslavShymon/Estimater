@@ -1,5 +1,6 @@
 export enum RouteEnum {
-  Estimate = "/main_window",
+  Estimates = "/main_window",
+  Estimate = "/main_window/:id",
   About = "/about",
   Settings = "/settings",
   Error = "/error",

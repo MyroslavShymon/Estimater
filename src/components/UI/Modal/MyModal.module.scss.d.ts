@@ -4,6 +4,7 @@ interface CssExports {
   'active': string;
   'modal': string;
   'modal-content': string;
+  'modal-icon': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
