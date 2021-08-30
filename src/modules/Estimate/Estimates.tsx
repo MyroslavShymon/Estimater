@@ -44,9 +44,10 @@ const Estimates: React.FC = (): JSX.Element => {
 
   useEffect(() => {
     setEstimates((estimates) => {
-      return (estimates = localStorage.getItem("estimates")
+      estimates = localStorage.getItem("estimates")
         ? JSON.parse(localStorage.getItem("estimates"))
-        : []);
+        : [];
+      return estimates;
     });
   }, []);
 
