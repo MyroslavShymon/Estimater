@@ -15,8 +15,8 @@ const Navbar: React.FC = (): JSX.Element => {
 
   return (
     <div className={classes.navbar}>
-      <Logo title="Estimater" link={RouteEnum.Estimates} />
-      <UserInfo />
+      {/* <Logo title="Estimater" link={RouteEnum.Estimates} /> */}
+      {/* <UserInfo /> */}
       <ul>
         {navbarItems.map((navbarItem) => (
           <NavbarItem

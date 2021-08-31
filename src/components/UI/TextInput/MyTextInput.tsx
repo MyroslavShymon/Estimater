@@ -30,7 +30,7 @@ const MyTextInput: React.FC<MyTextInputProps> = ({
 }): JSX.Element => {
   const [error, setError] = useState("");
 
-  const { myOnChange, ...newProps } = props;
+  const { myOnChange, ...extractedProps } = props;
 
   const filterNumbersInInput = (valueState: IValueState): number => {
     const correctNumber: string =
@@ -50,7 +50,7 @@ const MyTextInput: React.FC<MyTextInputProps> = ({
   return (
     <div className={classes["form-control-wrapper"]}>
       <input
-        {...newProps}
+        {...extractedProps}
         placeholder=" "
         data-title={children}
         className={classes["form-control"]}

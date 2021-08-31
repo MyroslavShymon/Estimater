@@ -1,6 +1,5 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
-import avatar from "../../../assets/person.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RouteEnum } from "../../../shared/enums/route.enum";
 import { faCog } from "@fortawesome/free-solid-svg-icons";
@@ -18,7 +17,7 @@ const UserInfo: React.FC = (): JSX.Element => {
         >
           <FontAwesomeIcon icon={faCog} color="white" size="lg" />
         </NavLink>
-        <img src={avatar} alt="avatar" className={classes.navbar__avatar} />
+        <img src="" alt="avatar" className={classes.navbar__avatar} />
       </div>
       <div className={classes["navbar__user-info"]}>
         <div className={classes["navbar__user-name"]}>Myroslav Shymon</div>

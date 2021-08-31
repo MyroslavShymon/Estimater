@@ -34,6 +34,7 @@ module.exports = {
       ".sass",
       ".png",
       ".webp",
+      ".svg",
     ],
   },
 };

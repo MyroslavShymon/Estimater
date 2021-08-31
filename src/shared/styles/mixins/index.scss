@@ -1,8 +1,8 @@
-@mixin flex($align: "start", $justify: "start", $direction: "row") {
+@mixin flex($align: start, $justify: start, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
-  @if $direction != "row" {
+  @if $direction != row {
     flex-direction: column;
     justify-content: $align;
     align-items: $justify;
@@ -20,4 +20,44 @@
 ) {
   box-shadow: inset 0 -3em 3em $color1, 0 0 0 2px $color2,
     0.3em 0.3em 1em $color3;
+}
+
+@mixin border-radius(
+  $all: 50%,
+  $top: 0,
+  $left: 0,
+  $bottom: 0,
+  $right: 0,
+  $top-left: 0,
+  $bottom-left: 0,
+  $top-right: 0,
+  $bottom-right: 0
+) {
+  /* top-left | top-right | bottom-right | bottom-left */
+  border-radius: $all;
+  @if $right !=0 {
+    border-radius: 0 $right $right 0;
+  }
+  @if $left !=0 {
+    border-radius: $left 0 0 $left;
+  }
+  @if $top !=0 {
+    border-radius: $top $top 0 0;
+  }
+  @if $bottom !=0 {
+    border-radius: 0 0 $bottom $bottom;
+  }
+
+  @if $top-left != 0 {
+    border-radius: $top-left 0 0 0;
+  }
+  @if $top-right != 0 {
+    border-radius: 0 $top-right 0 0;
+  }
+  @if $bottom-right != 0 {
+    border-radius: 0 0 $bottom-right 0;
+  }
+  @if $bottom-left != 0 {
+    border-radius: 0 0 0 $bottom-left;
+  }
 }

@@ -20,6 +20,7 @@ module.exports = {
       ".sass",
       ".webp",
       ".png",
+      ".svg",
     ],
   },
 };

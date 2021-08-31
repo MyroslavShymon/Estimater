@@ -9,9 +9,12 @@ import EvaluationPointsTable from "./EvaluationPointsTable/EvaluationPointsTable
 
 // export interface CurrentEstimatePageProps {}<CurrentEstimatePageProps>
 //TODO z-index navbar
+//TODO add loader
+
 const CurrentEstimatePage: React.FC = () => {
   const params: { id: string } = useParams();
 
+  const [estimates, setEstimates] = useState([] as IEstimate[]);
   const [currentEstimate, setCurrentEstimate] = useState({} as IEstimate);
   const [evaluationPoints, setEvaluationPoints] = useState(
     [] as IEvaluationPoint[]
@@ -20,20 +23,26 @@ const CurrentEstimatePage: React.FC = () => {
   const [unitPrice, setUnitPrice] = useState("");
 
   useEffect(() => {
+    const estimates: IEstimate[] = localStorage.getItem("estimates")
+      ? JSON.parse(localStorage.getItem("estimates"))
+      : [];
+    setEstimates(estimates);
     setCurrentEstimate((currentEstimate: IEstimate) => {
-      currentEstimate = JSON.parse(localStorage.getItem("estimates")).find(
+      currentEstimate = estimates.find(
         (estimate: IEstimate) => estimate.id === params.id
-      )
-        ? JSON.parse(localStorage.getItem("estimates")).find(
-            (estimate: IEstimate) => estimate.id === params.id
-          )
-        : {};
-
-      setUnitPrice(
-        currentEstimate.evaluationPoint[0].unitPrice
-          ? String(currentEstimate.evaluationPoint[0].unitPrice)
-          : ""
       );
+
+      if (!currentEstimate) {
+        return;
+      }
+
+      // if ("unitPrice" in currentEstimate.evaluationPoint[0]) {
+      //   setUnitPrice(String(currentEstimate.evaluationPoint[0].unitPrice));
+      // }
+
+      if ("evaluationPoint" in currentEstimate) {
+        setUnitPrice(String(currentEstimate.evaluationPoint[0].unitPrice));
+      }
 
       setEvaluationPoints((evaluationPoints: IEvaluationPoint[]) => {
         evaluationPoints = currentEstimate.evaluationPoint
@@ -56,23 +65,43 @@ const CurrentEstimatePage: React.FC = () => {
       });
     });
     return () => {
-      const estimates: IEstimate[] = localStorage.getItem("estimates")
-        ? JSON.parse(localStorage.getItem("estimates"))
-        : [];
-
-      localStorage.setItem(
-        "estimates",
-        JSON.stringify(
-          estimates.map((estimate: IEstimate) => {
-            if (estimate.id === currentEstimate.id) {
-              estimate.evaluationPoint = currentEstimate.evaluationPoint;
-            }
-            return estimate;
-          })
-        )
-      );
+      console.log("====================================");
+      console.log("estimates", estimates);
+      console.log("====================================");
+      localStorage.setItem("estimates", JSON.stringify(estimates));
+      // localStorage.setItem(
+      //   "estimates",
+      //   JSON.stringify(
+      //     estimates.map((estimate: IEstimate) => {
+      //       if (estimate.id === currentEstimate.id) {
+      //         estimate.evaluationPoint = currentEstimate.evaluationPoint;
+      //       }
+      //       return estimate;
+      //     })
+      //   )
+      // );
     };
   }, [unitPrice]);
+
+  const deleteEvaluationPoint = (id: string) => {
+    setEvaluationPoints((evaluationPoints: IEvaluationPoint[]) => {
+      const filteredEvaluationPoints: IEvaluationPoint[] =
+        evaluationPoints.filter(
+          (evaluationPoint: IEvaluationPoint) => evaluationPoint.id !== id
+        );
+
+      if (filteredEvaluationPoints) {
+        const filteredEstimates = estimates.map((estimate: IEstimate) => {
+          if (estimate.id === currentEstimate.id) {
+            estimate.evaluationPoint = filteredEvaluationPoints;
+          }
+          return estimate;
+        });
+        localStorage.setItem("estimates", JSON.stringify(filteredEstimates));
+      }
+      return filteredEvaluationPoints;
+    });
+  };
 
   return (
     <div className={classes.page}>
@@ -86,7 +115,10 @@ const CurrentEstimatePage: React.FC = () => {
         currentEstimate={currentEstimate}
       />
 
-      <EvaluationPointsTable evaluationPoints={evaluationPoints} />
+      <EvaluationPointsTable
+        evaluationPoints={evaluationPoints}
+        deleteEvaluationPoint={deleteEvaluationPoint}
+      />
     </div>
   );
 };

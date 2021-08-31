@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter";
 import Navbar from "./components/Navbar/Navbar";
 import { default as classes } from "./App.module.scss";
-
+import Sidebar from "./components/Sidebar/Sidebar";
 // export interface AppProps {}
 
 const App: React.FC = () => {
@@ -12,7 +12,8 @@ const App: React.FC = () => {
   return (
     <div className={classes.app}>
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
+        <Sidebar />
         <AppRouter />
       </BrowserRouter>
     </div>

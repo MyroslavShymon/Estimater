@@ -1,0 +1,10 @@
+.navbar {
+  @include flex($direction: column, $justify: center);
+  @include border-radius($right: 16px);
+  background: $primary;
+  position: fixed;
+  top: 0;
+  grid-area: navbar;
+  height: 100%;
+  width: 236px;
+}
