@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { RouteEnum } from "../../../shared/enums/route.enum";
+import { RouteEnum } from "../../../shared/types/enums/route.enum";
 import { faCog } from "@fortawesome/free-solid-svg-icons";
 import { default as classes } from "./UserInfo.module.scss";
 

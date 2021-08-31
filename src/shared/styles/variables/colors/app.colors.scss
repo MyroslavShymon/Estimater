@@ -3,5 +3,18 @@ $secondary: #e5e5e5;
 $success: rgb(24, 199, 24);
 $danger: rgb(199, 24, 24);
 $warning: rgb(199, 103, 24);
+$sidebar-link: linear-gradient(
+  90deg,
+  rgba(144, 111, 217, 0.16) 0%,
+  rgba(178, 154, 233, 0) 100%
+);
 /*$info:rgb(241, 238, 36);
 $light:rgb(241, 238, 36);*/
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  success: $success;
+  danger: $danger;
+  warning: $warning;
+  sidebar-link: $sidebar-link;
+}

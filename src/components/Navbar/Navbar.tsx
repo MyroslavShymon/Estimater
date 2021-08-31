@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { faCalculator } from "@fortawesome/free-solid-svg-icons";
-import { RouteEnum } from "../../shared/enums/route.enum";
+import { RouteEnum } from "../../shared/types/enums/route.enum";
 import { default as classes } from "./Navbar.module.scss";
 import NavbarItem from "./MenuItem/NavbarItem";
 import Logo from "../Logo/Logo";

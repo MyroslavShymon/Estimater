@@ -4,7 +4,7 @@ import MySidebar from "../../components/UI/Sidebar/MySidebar";
 import MySidebarNavItem from "./SidebarNavItem/MySidebarNavItem";
 import DashboardImage from "../../assets/Category.svg";
 import CalculateImage from "../../assets/Vector.svg";
-import { RouteEnum } from "../../shared/enums/route.enum";
+import { RouteEnum } from "../../shared/types/enums/route.enum";
 import { ISidebarNavItem } from "./environment/interfaces";
 import { default as classes } from "./Sidebar.module.scss";
 import Logo from "../Logo/Logo";
@@ -18,10 +18,14 @@ const Sidebar: React.FC = () => {
   ]);
 
   return (
-    <MySidebar className={classes.sidebar}>
+    <MySidebar>
       <Logo link={RouteEnum.Estimates} />
       {sidebarNavItems.map((sidebarNavItem: ISidebarNavItem) => (
-        <NavLink to={sidebarNavItem.link} key={sidebarNavItem.link}>
+        <NavLink
+          to={sidebarNavItem.link}
+          key={sidebarNavItem.link}
+          activeClassName={classes.sidebar__link_active}
+        >
           <MySidebarNavItem image={sidebarNavItem.image}>
             {sidebarNavItem.data}
           </MySidebarNavItem>

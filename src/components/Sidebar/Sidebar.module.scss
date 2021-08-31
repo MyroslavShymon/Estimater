@@ -3,4 +3,12 @@
   //   display: flex;
   //   justify-content: center;
   border: 1px solid red;
+  &__nav {
+  }
+  &__link_active {
+    div {
+      background: $sidebar-link;
+      font-weight: bold;
+    }
+  }
 }

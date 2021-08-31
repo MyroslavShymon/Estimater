@@ -2,9 +2,22 @@
 // Please do not change this file!
 interface CssExports {
   'active': string;
+  'danger': string;
   'modal': string;
   'modal-content': string;
   'modal-icon': string;
+  'primary': string;
+  'secondary': string;
+  'sidebar-link': string;
+  'success': string;
+  'text-dark-grey': string;
+  'text-light': string;
+  'text-light-grey': string;
+  'text-primary': string;
+  'text-primary-light': string;
+  'text-secondary': string;
+  'text-secondary-light': string;
+  'warning': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

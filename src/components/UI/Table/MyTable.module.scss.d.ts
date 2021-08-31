@@ -2,11 +2,24 @@
 // Please do not change this file!
 interface CssExports {
   'active-row': string;
+  'danger': string;
+  'primary': string;
+  'secondary': string;
+  'sidebar-link': string;
+  'success': string;
   'table': string;
   'table__tbody-tr': string;
   'table__td': string;
   'table__th': string;
   'table__thead-tr': string;
+  'text-dark-grey': string;
+  'text-light': string;
+  'text-light-grey': string;
+  'text-primary': string;
+  'text-primary-light': string;
+  'text-secondary': string;
+  'text-secondary-light': string;
+  'warning': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

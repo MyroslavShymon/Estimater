@@ -1,6 +1,7 @@
 import * as React from "react";
 import { default as classes } from "./MySidebarNavItem.module.scss";
 import MyButton from "../../UI/Button/MyButton";
+import { theme } from "../../../shared/constants/theme";
 
 export interface MySidebarNavItemProps {
   children?: string | React.ReactNode;
@@ -13,7 +14,7 @@ const MySidebarNavItem: React.FC<MySidebarNavItemProps> = ({
 }) => {
   return (
     <MyButton
-      backgroundHover="linear-gradient(90deg, rgba(144, 111, 217, 0.16) 0%, rgba(178, 154, 233, 0) 100%)"
+      backgroundHover={theme["sidebar-link"]}
       borderRadius="10px 0 0 10px"
       className={classes.navigationItem}
       width="md"
