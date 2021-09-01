@@ -8,8 +8,16 @@ $sidebar-link: linear-gradient(
   rgba(144, 111, 217, 0.16) 0%,
   rgba(178, 154, 233, 0) 100%
 );
-/*$info:rgb(241, 238, 36);
-$light:rgb(241, 238, 36);*/
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --success: #{$success};
+  --danger: #{$danger};
+  --warning: #{$warning};
+  --sidebar-link: #{$sidebar-link};
+}
+
 :export {
   primary: $primary;
   secondary: $secondary;
@@ -17,4 +25,6 @@ $light:rgb(241, 238, 36);*/
   danger: $danger;
   warning: $warning;
   sidebar-link: $sidebar-link;
+  //   primary: var(red);
+  //   --redd: var(--sidebar-link);
 }

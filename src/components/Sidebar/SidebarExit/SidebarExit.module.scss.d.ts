@@ -2,10 +2,10 @@
 // Please do not change this file!
 interface CssExports {
   'danger': string;
+  'exit-wrapper': string;
   'primary': string;
   'secondary': string;
   'sidebar-link': string;
-  'sidebar__link_active': string;
   'success': string;
   'text-dark-grey': string;
   'text-light': string;

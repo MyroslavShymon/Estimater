@@ -7,8 +7,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .table__thead-tr {
-  background-color: $secondary;
-  color: $dark;
+  background-color: var(--secondary);
   text-align: left;
   td {
     &:first-child {
@@ -24,7 +23,7 @@
   padding: 12px 15px;
 }
 .table__tbody-tr {
-  border-bottom: 1px solid $secondary;
+  border-bottom: 1px solid var(--secondary);
 
   td {
     &:first-child {
@@ -37,7 +36,7 @@
 }
 
 .table__tbody-tr:nth-of-type(even) {
-  background-color: $primary;
+  background-color: var(--primary);
 }
 
 .table__tbody-tr:last-of-type {
@@ -45,5 +44,5 @@
 }
 .table__tbody-tr.active-row {
   font-weight: bold;
-  color: $primary;
+  color: var(--primary);
 }

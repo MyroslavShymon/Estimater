@@ -1,5 +1,6 @@
 .navigationItem {
-  color: $text-secondary;
+  color: var(--text-secondary);
+  // margin: ;
   &__img {
     margin: 0 10px;
   }

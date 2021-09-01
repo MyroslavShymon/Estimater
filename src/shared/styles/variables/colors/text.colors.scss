@@ -14,6 +14,16 @@ $text-light: #ffffff;
 $text-dark-grey: rgb(65, 65, 65);
 $text-light-grey: rgb(99, 99, 99);
 
+:root {
+  --text-primary: #{$text-primary};
+  --text-primary-light: #{$text-primary-light};
+  --text-secondary: #{$text-secondary};
+  --text-secondary-light: #{$text-secondary-light};
+  --text-light: #{$text-light};
+  --text-dark-grey: #{text-dark-grey};
+  --text-light-grey: #{text-light-grey};
+}
+
 :export {
   text-primary: $text-primary;
   text-primary-light: $text-primary-light;

@@ -4,8 +4,8 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: darken($primary, 10%);
-  color: $text-primary;
+  background-color: var(--warning);
+  color: var(--text-primary);
   font-family: "Roboto Condensed", sans-serif;
 }
 img {
@@ -13,5 +13,5 @@ img {
   height: auto;
 }
 a {
-  color: $text-primary;
+  color: var(--text-primary);
 }

@@ -1,13 +1,13 @@
-import React, { memo } from "react";
+import React, { memo, useRef, useEffect } from "react";
+import { theme } from "../../../shared/constants/theme";
 import { IStyles } from "./environment/interfaces";
 import { default as classes } from "./MyButton.module.scss";
-import styled, { css } from "styled-components";
 
 //TODO shadow hover
 //TODO shadow active
 //TODO fix transition
 //TODO add types of button
-//TODO Theme with styled-components
+//TODO custom hook
 
 export interface MyButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   children: string | React.ReactNode;
@@ -19,12 +19,15 @@ export interface MyButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   shadow?: boolean;
   borderRadius?: "sm" | "md" | "lg" | string;
   width?: "sm" | "md" | "lg" | string;
+  height?: "sm" | "md" | "lg" | string;
 }
 
 const MyButton: React.FC<MyButtonProps> = memo(({ children, ...props }) => {
   const classesResult: string[] = [];
+  const MyDivRef = useRef<HTMLDivElement>();
   const {
     color,
+    height,
     style,
     background,
     shadow,
@@ -39,6 +42,36 @@ const MyButton: React.FC<MyButtonProps> = memo(({ children, ...props }) => {
 
   classesResult.push(className);
   classesResult.push(classes["pure-material-button-contained"]);
+
+  useEffect(() => {
+    const addHoveredOn = () => {
+      MyDivRef.current.addEventListener("mouseover", () => {
+        MyDivRef.current.style.background = backgroundHover;
+        // MyDivRef.current.style.transitionDuration = "0.3";
+        // MyDivRef.current.style.transition = "0.5s all easy";
+      });
+    };
+    const addHoveredOut = () => {
+      MyDivRef.current.addEventListener("mouseout", () => {
+        MyDivRef.current.style.background = "transparent";
+        // MyDivRef.current.style.transitionDuration = "0.3";
+        // MyDivRef.current.setAttribute("style", "transition:0.5s all easy;");
+
+        // MyDivRef.current.style.transition = "0.5s all easy";
+      });
+    };
+    if (backgroundHover) {
+      if (MyDivRef.current) {
+        addHoveredOn();
+        addHoveredOut();
+      }
+    }
+    return () => {
+      MyDivRef.current.removeEventListener("mouseover", addHoveredOn);
+      MyDivRef.current.removeEventListener("mouseout", addHoveredOut);
+    };
+  }, []);
+
   if (color) {
     styles.color = color;
   }
@@ -80,27 +113,31 @@ const MyButton: React.FC<MyButtonProps> = memo(({ children, ...props }) => {
     }
   }
 
+  if (height) {
+    switch (height) {
+      case "sm":
+        styles.height = "14px";
+        break;
+      case "md":
+        styles.height = "36px";
+        break;
+      case "lg":
+        styles.height = "48px";
+        break;
+
+      default:
+        styles.height = height;
+        break;
+    }
+  }
+
   if (shadow === false) {
     styles.boxShadow = `none`;
   }
 
-  const Button = styled.div`
-    ${(styles) => {
-      return (
-        styles &&
-        backgroundHover &&
-        css`
-          :hover {
-            transition: all 1s ease-out;
-            background: ${() => backgroundHover};
-          }
-        `
-      );
-    }}
-  `;
-
   return (
-    <Button
+    <div
+      ref={MyDivRef}
       {...extractedProps}
       style={{
         ...styles,
@@ -109,7 +146,7 @@ const MyButton: React.FC<MyButtonProps> = memo(({ children, ...props }) => {
       className={classesResult.join(" ")}
     >
       {children}
-    </Button>
+    </div>
   );
 });
 

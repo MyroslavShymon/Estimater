@@ -4,10 +4,14 @@ import MySidebar from "../../components/UI/Sidebar/MySidebar";
 import MySidebarNavItem from "./SidebarNavItem/MySidebarNavItem";
 import DashboardImage from "../../assets/Category.svg";
 import CalculateImage from "../../assets/Vector.svg";
+import LogoutImage from "../../assets/Logout.svg";
 import { RouteEnum } from "../../shared/types/enums/route.enum";
 import { ISidebarNavItem } from "./environment/interfaces";
 import { default as classes } from "./Sidebar.module.scss";
 import Logo from "../Logo/Logo";
+import SidebarExit from "./SidebarExit/SidebarExit";
+// import MyButton from "../UI/Button/MyButton";
+// import { theme } from "../../shared/constants/theme";
 
 // export interface SidebarProps {}<SidebarProps>
 
@@ -31,6 +35,9 @@ const Sidebar: React.FC = () => {
           </MySidebarNavItem>
         </NavLink>
       ))}
+      <SidebarExit>
+        <MySidebarNavItem image={LogoutImage}>Exit</MySidebarNavItem>
+      </SidebarExit>
     </MySidebar>
   );
 };

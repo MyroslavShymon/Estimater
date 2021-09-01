@@ -4,9 +4,9 @@
   outline: none !important;
   box-shadow: none !important;
   background: transparent;
-  color: $text-primary;
+  color: var(--text-primary);
   border: 0;
-  border-bottom: 2px solid $text-dark-grey;
+  border-bottom: 2px solid var(--text-dark-grey);
   font-size: 20px;
   padding: 0 4px;
   margin: 0 10px;
@@ -14,7 +14,7 @@
     position: relative;
   }
   &:focus {
-    border-bottom-color: $secondary;
+    border-bottom-color: var(--secondary);
   }
 
   &:not(.touched) + .floater:before {
@@ -22,7 +22,7 @@
     position: absolute;
     top: 0;
     font-size: 20px;
-    color: $text-light-grey;
+    color: var(--text-light-grey);
     pointer-events: none;
     transition: 0.25s all ease-in-out;
   }
@@ -33,7 +33,7 @@
     position: absolute;
     top: -20px;
     font-size: 14px;
-    color: $text-primary;
+    color: var(--text-primary);
   }
 
   & + .floater:before,

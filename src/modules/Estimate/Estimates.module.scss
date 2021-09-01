@@ -4,7 +4,7 @@
   @include flex($align: center, $justify: center);
   @include transition();
   @include shadow();
-  background-color: $primary;
+  background-color: var(--primary);
   position: relative;
   z-index: 1;
   height: 26vh;
@@ -36,7 +36,7 @@
     font-size: 20px;
   }
   &-add {
-    fill: $secondary;
+    fill: var(--secondary);
   }
   &-time {
     position: absolute;
@@ -49,7 +49,7 @@
     top: -8px;
     right: -8px;
     &_active {
-      color: $secondary;
+      color: var(--secondary);
     }
   }
   &__trash {

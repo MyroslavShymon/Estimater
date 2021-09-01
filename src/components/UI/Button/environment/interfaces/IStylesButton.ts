@@ -5,4 +5,5 @@ export interface IStyles {
   borderRadius?: string;
   backgroundHover?: string;
   width?: string;
+  height?: string;
 }

@@ -1,9 +1,0 @@
-.navbar {
-  @include flex($direction: column);
-  background: $primary;
-  position: fixed;
-  top: 0;
-  grid-area: navbar;
-  height: 100%;
-  width: 230px;
-}

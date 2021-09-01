@@ -3,6 +3,7 @@ export interface ITheme {
   primary?: string;
   secondary?: string;
   success?: string;
+  warning?: string;
   "text-dark-grey"?: string;
   "text-light"?: string;
   "text-light-grey"?: string;

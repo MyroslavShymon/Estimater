@@ -19,6 +19,7 @@ const MySidebarNavItem: React.FC<MySidebarNavItemProps> = ({
       className={classes.navigationItem}
       width="md"
       shadow={false}
+      height="lg"
     >
       <img src={image} alt="" className={classes.navigationItem__img} />
       {children}

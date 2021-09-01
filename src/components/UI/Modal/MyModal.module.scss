@@ -18,7 +18,7 @@
     @include shadow();
     position: relative;
     padding: 40px;
-    background-color: $primary;
+    background-color: var(--primary);
   }
 }
 .active {
