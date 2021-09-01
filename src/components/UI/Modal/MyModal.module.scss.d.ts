@@ -7,6 +7,7 @@ interface CssExports {
   'modal-content': string;
   'modal-icon': string;
   'primary': string;
+  'primary-background': string;
   'secondary': string;
   'sidebar-link': string;
   'success': string;

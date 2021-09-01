@@ -2,24 +2,20 @@ import * as React from "react";
 import { NavLink } from "react-router-dom";
 import MySidebar from "../../components/UI/Sidebar/MySidebar";
 import MySidebarNavItem from "./SidebarNavItem/MySidebarNavItem";
-import DashboardImage from "../../assets/Category.svg";
-import CalculateImage from "../../assets/Vector.svg";
 import LogoutImage from "../../assets/Logout.svg";
 import { RouteEnum } from "../../shared/types/enums/route.enum";
 import { ISidebarNavItem } from "./environment/interfaces";
 import { default as classes } from "./Sidebar.module.scss";
 import Logo from "../Logo/Logo";
 import SidebarExit from "./SidebarExit/SidebarExit";
+import { navigationItems } from "../../shared/constants";
 // import MyButton from "../UI/Button/MyButton";
 // import { theme } from "../../shared/constants/theme";
 
 // export interface SidebarProps {}<SidebarProps>
 
 const Sidebar: React.FC = () => {
-  const [sidebarNavItems, setSidebarNavItems] = React.useState([
-    { link: RouteEnum.Estimates, image: DashboardImage, data: "Dashboard" },
-    { link: RouteEnum.Calculate, image: CalculateImage, data: "Calculate" },
-  ]);
+  const [sidebarNavItems, setSidebarNavItems] = React.useState(navigationItems);
 
   return (
     <MySidebar>

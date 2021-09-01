@@ -1,0 +1,21 @@
+.user {
+  @include flex($align: center);
+  margin: 0 0 0 8px;
+  &-wrapper {
+    @include flex($align: center, $justify: center);
+  }
+  &__icon {
+    cursor: pointer;
+    margin: 0 16px 0 0;
+  }
+  &__info {
+    @include flex($direction: column);
+    margin: 0 0 0 16px;
+  }
+  &__role {
+    font-weight: 400;
+  }
+  &__name {
+    font-weight: 600;
+  }
+}

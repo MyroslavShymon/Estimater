@@ -3,6 +3,7 @@
 interface CssExports {
   'danger': string;
   'primary': string;
+  'primary-background': string;
   'secondary': string;
   'sidebar-link': string;
   'success': string;

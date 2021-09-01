@@ -4,6 +4,7 @@ import AppRouter from "./components/AppRouter";
 // import Navbar from "./components/Navbar/Navbar";
 import { default as classes } from "./App.module.scss";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Header from "./components/Header/Header";
 // export interface AppProps {}
 
 const App: React.FC = () => {
@@ -13,8 +14,9 @@ const App: React.FC = () => {
     <div className={classes.app}>
       <BrowserRouter>
         {/* <Navbar /> */}
-        <Sidebar />
+        <Header />
         <AppRouter />
+        <Sidebar />
       </BrowserRouter>
     </div>
   );

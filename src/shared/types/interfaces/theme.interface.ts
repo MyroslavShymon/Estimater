@@ -4,6 +4,7 @@ export interface ITheme {
   secondary?: string;
   success?: string;
   warning?: string;
+  "primary-background"?: string;
   "text-dark-grey"?: string;
   "text-light"?: string;
   "text-light-grey"?: string;

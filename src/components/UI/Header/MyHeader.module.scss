@@ -1,0 +1,5 @@
+.header {
+  @include flex();
+  grid-area: header;
+  padding: 32px 24px;
+}

@@ -5,6 +5,7 @@ interface CssExports {
   'navigationItem': string;
   'navigationItem__img': string;
   'primary': string;
+  'primary-background': string;
   'secondary': string;
   'sidebar-link': string;
   'success': string;

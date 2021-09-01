@@ -6,6 +6,7 @@ interface CssExports {
   'form-control': string;
   'form-control-wrapper': string;
   'primary': string;
+  'primary-background': string;
   'secondary': string;
   'sidebar-link': string;
   'success': string;

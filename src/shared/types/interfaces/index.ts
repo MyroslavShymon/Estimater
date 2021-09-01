@@ -1,3 +1,3 @@
-import { ITheme } from "./ITheme";
+import { ITheme } from "./theme.interface";
 
 export { ITheme };

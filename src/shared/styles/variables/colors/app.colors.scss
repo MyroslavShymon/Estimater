@@ -1,5 +1,6 @@
 $primary: #ffff;
-$secondary: #e5e5e5;
+$primary-background: #f5f7fb;
+$secondary: red;
 $success: rgb(24, 199, 24);
 $danger: rgb(199, 24, 24);
 $warning: rgb(199, 103, 24);
@@ -11,6 +12,7 @@ $sidebar-link: linear-gradient(
 
 :root {
   --primary: #{$primary};
+  --primary-background: #{$primary-background};
   --secondary: #{$secondary};
   --success: #{$success};
   --danger: #{$danger};
@@ -20,6 +22,7 @@ $sidebar-link: linear-gradient(
 
 :export {
   primary: $primary;
+  primary-background: $primary-background;
   secondary: $secondary;
   success: $success;
   danger: $danger;

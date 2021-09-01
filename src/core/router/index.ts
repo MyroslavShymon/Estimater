@@ -1,15 +1,9 @@
-import { FunctionComponent } from "react";
 import Error from "../../modules/Error/Error";
 import { RouteEnum } from "../../shared/types/enums/route.enum";
 import About from "../../modules/About";
 import Estimate from "../../modules/Estimate/Estimates";
 import CurrentEstimatePage from "../../modules/CurrentEstimatePage/EstimateCurrentPage";
-
-export type RouteType = {
-  path: string;
-  component: FunctionComponent;
-  exact: boolean;
-};
+import { RouteType } from "../../shared/types/types";
 
 export const routers: RouteType[] = [
   { path: RouteEnum.Estimates, component: Estimate, exact: true },

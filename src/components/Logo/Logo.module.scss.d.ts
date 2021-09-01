@@ -5,6 +5,7 @@ interface CssExports {
   'logo': string;
   'logo-wrapper': string;
   'primary': string;
+  'primary-background': string;
   'secondary': string;
   'sidebar-link': string;
   'success': string;

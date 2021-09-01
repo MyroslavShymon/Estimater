@@ -13,6 +13,7 @@ interface CssExports {
   'estimate__link': string;
   'estimate__trash': string;
   'primary': string;
+  'primary-background': string;
   'secondary': string;
   'sidebar-link': string;
   'success': string;

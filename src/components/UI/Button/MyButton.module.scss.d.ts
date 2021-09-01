@@ -4,6 +4,7 @@ interface CssExports {
   'backgroundHover': string;
   'danger': string;
   'primary': string;
+  'primary-background': string;
   'pure-material-button-contained': string;
   'secondary': string;
   'sidebar-link': string;

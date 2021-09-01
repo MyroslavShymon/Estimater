@@ -21,7 +21,7 @@
     display: block;
     position: absolute;
     top: 0;
-    font-size: 20px;
+    font-size: $font-size-xLarge;
     color: var(--text-light-grey);
     pointer-events: none;
     transition: 0.25s all ease-in-out;
@@ -32,7 +32,7 @@
   &:not(:placeholder-shown) + .floater:before {
     position: absolute;
     top: -20px;
-    font-size: 14px;
+    font-size: $font-size-default;
     color: var(--text-primary);
   }
 
