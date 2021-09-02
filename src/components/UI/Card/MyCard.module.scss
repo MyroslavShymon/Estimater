@@ -1,0 +1,27 @@
+.card {
+  @include flex($direction: column, $justify: center);
+  @extend %border-radius;
+  background-color: var(--primary);
+  flex-wrap: wrap;
+  text-align: center;
+  &__header,
+  &__body,
+  &__footer {
+    width: 100%;
+  }
+  &__header,
+  &__footer {
+    @include flex($align: center, $justify: center);
+    padding: 8px 16px;
+    text-align: center;
+  }
+  &__body {
+    @include flex($direction: column, $align: space-between, $justify: center);
+    padding: 16px 16px;
+    text-align: center;
+  }
+  &__footer {
+  }
+  &__header {
+  }
+}

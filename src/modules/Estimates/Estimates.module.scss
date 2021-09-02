@@ -1,0 +1,13 @@
+.estimates {
+  @include flex($direction: column);
+  &-wrapper {
+    @include flex();
+    flex-wrap: wrap;
+  }
+  &__title {
+    margin: 0 0 24px 0;
+    font-size: $font-size-large;
+    color: var(--text-secondary-light);
+    font-weight: 600;
+  }
+}

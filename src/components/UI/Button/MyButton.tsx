@@ -67,8 +67,10 @@ const MyButton: React.FC<MyButtonProps> = memo(({ children, ...props }) => {
       }
     }
     return () => {
+      // if (MyDivRef.current) {
       MyDivRef.current.removeEventListener("mouseover", addHoveredOn);
       MyDivRef.current.removeEventListener("mouseout", addHoveredOut);
+      // }
     };
   }, []);
 

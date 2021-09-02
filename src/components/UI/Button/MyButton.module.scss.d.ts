@@ -7,6 +7,7 @@ interface CssExports {
   'primary-background': string;
   'pure-material-button-contained': string;
   'secondary': string;
+  'secondary-light': string;
   'sidebar-link': string;
   'success': string;
   'text-dark-grey': string;
@@ -14,6 +15,7 @@ interface CssExports {
   'text-light-grey': string;
   'text-primary': string;
   'text-primary-light': string;
+  'text-primary-light-2': string;
   'text-secondary': string;
   'text-secondary-light': string;
   'warning': string;

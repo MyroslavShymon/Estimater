@@ -1,6 +1,11 @@
 $primary: #ffff;
 $primary-background: #f5f7fb;
-$secondary: red;
+$secondary: #906fd9;
+$secondary-light: linear-gradient(
+  90deg,
+  rgba(144, 111, 217, 0.36) 0%,
+  rgba(178, 154, 233, 0.44) 100%
+);
 $success: rgb(24, 199, 24);
 $danger: rgb(199, 24, 24);
 $warning: rgb(199, 103, 24);
@@ -14,6 +19,7 @@ $sidebar-link: linear-gradient(
   --primary: #{$primary};
   --primary-background: #{$primary-background};
   --secondary: #{$secondary};
+  --secondary-light: #{$secondary-light};
   --success: #{$success};
   --danger: #{$danger};
   --warning: #{$warning};
@@ -24,6 +30,7 @@ $sidebar-link: linear-gradient(
   primary: $primary;
   primary-background: $primary-background;
   secondary: $secondary;
+  secondary-light: $secondary-light;
   success: $success;
   danger: $danger;
   warning: $warning;

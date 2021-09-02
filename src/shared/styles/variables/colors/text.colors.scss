@@ -8,6 +8,7 @@ $text-light:rgb(241, 238, 36);
 $text-muted:;*/
 $text-primary: #030306;
 $text-primary-light: rgba(3, 3, 6, 0.48);
+$text-primary-light-2: rgba(0, 0, 0, 0.48);
 $text-secondary: #906fd9;
 $text-secondary-light: rgba(144, 111, 217, 0.48);
 $text-light: #ffffff;
@@ -17,6 +18,7 @@ $text-light-grey: rgb(99, 99, 99);
 :root {
   --text-primary: #{$text-primary};
   --text-primary-light: #{$text-primary-light};
+  --text-primary-light-2: #{$text-primary-light-2};
   --text-secondary: #{$text-secondary};
   --text-secondary-light: #{$text-secondary-light};
   --text-light: #{$text-light};
@@ -27,6 +29,7 @@ $text-light-grey: rgb(99, 99, 99);
 :export {
   text-primary: $text-primary;
   text-primary-light: $text-primary-light;
+  text-primary-light-2: $text-primary-light-2;
   text-secondary: $text-secondary;
   text-secondary-light: $text-secondary-light;
   text-light: $text-light;

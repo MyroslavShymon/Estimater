@@ -2,7 +2,9 @@
 // Please do not change this file!
 interface CssExports {
   'danger': string;
-  'page': string;
+  'estimates': string;
+  'estimates-wrapper': string;
+  'estimates__title': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;

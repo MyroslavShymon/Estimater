@@ -1,0 +1,88 @@
+.card {
+  margin: 0 24px 24px 0;
+  white-space: nowrap;
+  &__header {
+    justify-content: space-between !important;
+  }
+  &__button {
+    padding: 10.5px 12px;
+    border: 1px solid transparent;
+    min-width: 0; //TODO check button min-width
+    transition: 0.3s all ease-in-out;
+    &:last-child {
+      margin: 0 0 0 8.5px;
+    }
+    &:hover {
+      transition: 0.3s all ease-in-out;
+      border: 1px solid var(--secondary);
+      border-radius: 8px;
+    }
+    &_active {
+      background: var(--secondary-light);
+    }
+  }
+  &__title {
+    font-size: $font-size-medium;
+  }
+  &__action {
+    &-wrapper {
+      @include flex();
+    }
+    &__item {
+    }
+  }
+  &__totals {
+    @include flex($justify: space-between);
+    &-wrapper {
+      @include flex($justify: space-between);
+      width: 100%;
+    }
+  }
+  &__total {
+    @include flex($direction: column);
+    &-title {
+      color: var(--text-primary-light-2);
+    }
+    &-text {
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: $font-size-xxLarge;
+      margin: 8px 0 0 0;
+    }
+    &-item {
+      @include flex($direction: column);
+      &:last-child {
+        margin: 0 0 0 48px;
+      }
+    }
+  }
+  &__date {
+    margin: 0 0 0 57px;
+    font-size: $font-size-small;
+    color: var(--text-primary-light-2);
+  }
+  &__footer {
+    padding: 40px 12px 0 !important;
+    &-button {
+      @include border-radius($top: 16px);
+      color: var(--text-secondary-light);
+      border: 1px solid transparent;
+      &:hover {
+        @include transition();
+
+        border-top: 1px solid $secondary;
+        border-left: 1px solid $secondary;
+        border-right: 1px solid $secondary;
+      }
+      @include transition();
+      &_active {
+        background: var(--secondary-light);
+        color: var(--text-light);
+      }
+      &-wrapper {
+        @include flex();
+        margin: 0 95px 0 0;
+      }
+    }
+  }
+}
