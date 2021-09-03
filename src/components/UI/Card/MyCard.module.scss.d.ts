@@ -5,7 +5,16 @@ interface CssExports {
   'card__body': string;
   'card__footer': string;
   'card__header': string;
+  'color-green': string;
+  'color-grey': string;
+  'color-orange': string;
+  'color-pink': string;
+  'color-red': string;
+  'color-violet': string;
+  'color-white': string;
+  'color-yellow': string;
   'danger': string;
+  'dashboard-statistic': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;

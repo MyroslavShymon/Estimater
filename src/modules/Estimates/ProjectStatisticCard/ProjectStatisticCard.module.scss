@@ -1,0 +1,49 @@
+.card {
+  background: var(--dashboard-statistic);
+  white-space: nowrap;
+  &__body {
+    @include flex($direction: row, $justify: space-between);
+    padding: 0 23px 44px;
+    &-title {
+      color: var(--text-primary-light-2);
+    }
+    &-text {
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: $font-size-xxLarge;
+      margin: 8px 0 0 0;
+    }
+    &-item {
+      @include flex($direction: column);
+      margin: 0 34px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  //TODO make components to My because styles repeat
+  &__header {
+    padding: 0 12px 24px 12px;
+    &-button {
+      border-radius: 0 0 16px 16px !important;
+      color: var(--text-secondary-light) !important;
+      border: 1px solid transparent !important;
+      padding: 11px 16px 9px;
+      background: none;
+      &:hover {
+        @include transition();
+
+        border-bottom: 1px solid var(--secondary) !important;
+        border-left: 1px solid var(--secondary) !important;
+        border-right: 1px solid var(--secondary) !important;
+      }
+      &_active {
+        background: var(--secondary-light);
+        color: var(--text-light) !important;
+      }
+      &-wrapper {
+        @include flex();
+      }
+    }
+  }
+}

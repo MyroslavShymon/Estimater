@@ -1,7 +1,10 @@
 .estimates {
-  @include flex($direction: column);
+  @include flex();
+  &__data {
+    @include flex($direction: column);
+  }
   &-wrapper {
-    @include flex();
+    @include flex($justify: space-between);
     flex-wrap: wrap;
   }
   &__title {
@@ -9,5 +12,11 @@
     font-size: $font-size-large;
     color: var(--text-secondary-light);
     font-weight: 600;
+  }
+  // &__block {
+  //   @include flex($direction: column);
+  // }
+  &__cards {
+    @include flex();
   }
 }

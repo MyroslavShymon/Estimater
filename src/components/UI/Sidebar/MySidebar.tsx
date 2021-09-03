@@ -7,8 +7,12 @@ export interface MySidebarProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const MySidebar: React.FC<MySidebarProps> = ({ children, ...props }) => {
+  const classesResult: string[] = [];
+  const { className, ...extractedProps } = props;
+  classesResult.push(className);
+  classesResult.push(classes.navbar);
   return (
-    <div {...props} className={classes.navbar}>
+    <div {...extractedProps} className={classesResult.join(" ")}>
       {children}
     </div>
   );

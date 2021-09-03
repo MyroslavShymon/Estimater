@@ -1,4 +1,8 @@
 .sidebar {
+  left: -230px;
+  &_open {
+    left: 0;
+  }
   &__link_active {
     div {
       background: var(--sidebar-link) !important;

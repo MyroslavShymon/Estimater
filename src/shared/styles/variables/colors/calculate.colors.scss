@@ -1,0 +1,19 @@
+$color-orange: #fffde9;
+$color-red: #fff1f1;
+$color-yellow: #f4ffe1;
+$color-green: #d6fef7;
+$color-violet: #eaf0ff;
+$color-pink: #fdeeff;
+$color-white: #ffffff;
+$color-grey: #efefef;
+
+:export {
+  color-orange: $color-orange;
+  color-red: $color-red;
+  color-yellow: $color-yellow;
+  color-green: $color-green;
+  color-violet: $color-violet;
+  color-pink: $color-pink;
+  color-white: $color-white;
+  color-grey: $color-grey;
+}

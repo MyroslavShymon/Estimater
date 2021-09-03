@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { memo, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import MySidebar from "../../components/UI/Sidebar/MySidebar";
 import MySidebarNavItem from "./SidebarNavItem/MySidebarNavItem";
@@ -12,13 +12,22 @@ import { navigationItems } from "../../shared/constants";
 // import MyButton from "../UI/Button/MyButton";
 // import { theme } from "../../shared/constants/theme";
 
-// export interface SidebarProps {}<SidebarProps>
+export interface SidebarProps {
+  toggleShow: (opened: boolean) => void;
+  opened: boolean;
+}
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC<SidebarProps> = ({ opened, toggleShow }) => {
   const [sidebarNavItems, setSidebarNavItems] = React.useState(navigationItems);
+  // const sidebarBlock = useRef<HTMLDivElement>();
 
   return (
-    <MySidebar>
+    <MySidebar
+      className={
+        opened ? `${classes.sidebar} ${classes.sidebar_open}` : classes.sidebar
+      }
+    >
+      {/* <div></div> */}
       <Logo link={RouteEnum.Estimates} />
       {sidebarNavItems.map((sidebarNavItem: ISidebarNavItem) => (
         <NavLink
@@ -34,8 +43,19 @@ const Sidebar: React.FC = () => {
       <SidebarExit>
         <MySidebarNavItem image={LogoutImage}>Exit</MySidebarNavItem>
       </SidebarExit>
+      <button
+        style={{
+          position: "absolute",
+          top: "20px",
+          right: "-35px",
+          backgroundColor: "green",
+        }}
+        onClick={() => toggleShow(opened)}
+      >
+        Close
+      </button>
     </MySidebar>
   );
 };
 
-export default Sidebar;
+export default memo(Sidebar);

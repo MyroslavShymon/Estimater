@@ -3,7 +3,7 @@ import { default as classes } from "./Header.module.scss";
 import MyHeader from "../UI/Header/MyHeader";
 import HeaderCurrentRoute from "./HeaderCurrentRoute/HeaderCurrentRoute";
 import HeaderUser from "./HeaderUser/HeaderUser";
-//TODO
+//TODO add redux toggle navbar
 
 // export interface HeaderProps {
 

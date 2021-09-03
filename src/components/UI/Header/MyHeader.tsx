@@ -5,6 +5,7 @@ import { default as classes } from "./MyHeader.module.scss";
 export interface MyHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children: string | React.ReactNode;
   justifyContent?: string;
+  ref?: React.MutableRefObject<HTMLDivElement>;
   alignItems?: string;
 }
 

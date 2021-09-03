@@ -13,4 +13,12 @@ export interface ITheme {
   "text-secondary"?: string;
   "text-secondary-light"?: string;
   "sidebar-link"?: string;
+  "color-orange"?: string;
+  "color-red"?: string;
+  "color-yellow"?: string;
+  "color-green"?: string;
+  "color-violet"?: string;
+  "color-white"?: string;
+  "color-grey"?: string;
+  "color-pink"?: string;
 }

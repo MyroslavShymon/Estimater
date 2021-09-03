@@ -17,6 +17,7 @@ export interface MyTextInputProps
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   myOnChange?: (e: React.ChangeEvent<HTMLInputElement>) => IValueState;
   props?: unknown;
+  ref?: React.MutableRefObject<HTMLInputElement>;
   color?: string;
 }
 export const numberToFixed = (number: number, decimalPlaces = 2): string => {

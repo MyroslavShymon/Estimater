@@ -5,6 +5,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { default as classes } from "./MyModal.module.scss";
 
 export interface MyModalProps {
+  ref?: React.MutableRefObject<HTMLDivElement>;
   visible: boolean;
   setVisible: (visible: boolean) => void;
   children: JSX.Element | string;

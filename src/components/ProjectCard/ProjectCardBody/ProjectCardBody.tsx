@@ -1,6 +1,6 @@
 import * as React from "react";
+import MyCardBody from "../../../components/UI/Card/CardBody/MyCardBody";
 import { default as classes } from "../ProjectCard.module.scss";
-import MyCardBody from "../../../../components/UI/Card/CardBody/MyCardBody";
 
 // export interface ProjectCardBodyProps {
 

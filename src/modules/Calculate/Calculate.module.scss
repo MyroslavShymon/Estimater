@@ -1,0 +1,25 @@
+.calculate {
+  @include flex($direction: column, $justify: flex-end);
+
+  &__button {
+    color: var(--text-light);
+    background-color: var(--secondary);
+    position: sticky;
+    border-radius: 16px;
+    margin: 17px 0;
+    top: 10px;
+    z-index: 2;
+  }
+  &__projects-wrapper {
+    @include flex($justify: space-between);
+    &:last-child {
+      margin: 0 0 24px 0;
+    }
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1400px) {
+  .calculate__projects-wrapper {
+    @include flex();
+  }
+}

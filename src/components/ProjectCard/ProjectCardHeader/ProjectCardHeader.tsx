@@ -1,9 +1,9 @@
 import * as React from "react";
 import { default as classes } from "../ProjectCard.module.scss";
-import Delete from "../../../../assets/Delete.svg";
-import Bookmark from "../../../../assets/Bookmark.svg";
-import MyCardHeader from "../../../../components/UI/Card/CardHeader/MyCardHeader";
-import MyButton from "../../../../components/UI/Button/MyButton";
+import Delete from "../../../assets/Delete.svg";
+import Bookmark from "../../../assets/Bookmark.svg";
+import MyCardHeader from "../../../components/UI/Card/CardHeader/MyCardHeader";
+import MyButton from "../../../components/UI/Button/MyButton";
 
 // export interface ProjectCardHeaderProps {<ProjectCardHeaderProps>
 

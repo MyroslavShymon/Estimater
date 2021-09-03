@@ -2,6 +2,7 @@ import * as React from "react";
 import { default as classes } from "./MyCard.module.scss";
 export interface MyCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: string | React.ReactNode;
+  ref?: React.MutableRefObject<HTMLDivElement>;
   props?: unknown;
 }
 

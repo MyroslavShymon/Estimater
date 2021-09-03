@@ -1,14 +1,20 @@
 import * as React from "react";
 import { default as classes } from "./ProjectCard.module.scss";
-import MyCard from "../../../components/UI/Card/MyCard";
 import ProjectCardHeader from "./ProjectCardHeader/ProjectCardHeader";
 import ProjectCardBody from "./ProjectCardBody/ProjectCardBody";
 import ProjectCardFooter from "./ProjectCardFooter/ProjectCardFooter";
-// export interface ProjectCardProps {}<ProjectCardProps>
+import MyCard from "../UI/Card/MyCard";
 
-const ProjectCard: React.FC = () => {
+export interface ProjectCardProps {
+  background?: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ background }) => {
+  console.log("====================================");
+  console.log("background", background);
+  console.log("====================================");
   return (
-    <MyCard className={classes.card}>
+    <MyCard style={{ background }} className={classes.card}>
       <ProjectCardHeader />
       <ProjectCardBody />
       <ProjectCardFooter />

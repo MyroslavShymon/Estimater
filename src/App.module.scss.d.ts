@@ -2,7 +2,17 @@
 // Please do not change this file!
 interface CssExports {
   'app': string;
+  'app_open': string;
+  'color-green': string;
+  'color-grey': string;
+  'color-orange': string;
+  'color-pink': string;
+  'color-red': string;
+  'color-violet': string;
+  'color-white': string;
+  'color-yellow': string;
   'danger': string;
+  'dashboard-statistic': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;

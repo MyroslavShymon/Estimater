@@ -1,21 +1,24 @@
 .card {
   margin: 0 24px 24px 0;
   white-space: nowrap;
+  &:nth-child(4n) {
+    margin: 0 0 24px 0;
+  }
   &__header {
     justify-content: space-between !important;
   }
   &__button {
     padding: 10.5px 12px;
     border: 1px solid transparent;
+    border-radius: 8px;
     min-width: 0; //TODO check button min-width
-    transition: 0.3s all ease-in-out;
+    @include transition();
     &:last-child {
       margin: 0 0 0 8.5px;
     }
     &:hover {
-      transition: 0.3s all ease-in-out;
+      @include transition();
       border: 1px solid var(--secondary);
-      border-radius: 8px;
     }
     &_active {
       background: var(--secondary-light);
@@ -64,25 +67,32 @@
   &__footer {
     padding: 40px 12px 0 !important;
     &-button {
-      @include border-radius($top: 16px);
-      color: var(--text-secondary-light);
-      border: 1px solid transparent;
+      @include transition();
+      // @include border-radius($top: 16px);
+      border-radius: 16px 16px 0 0 !important;
+      color: var(--text-secondary-light) !important;
+      border: 1px solid transparent !important;
       &:hover {
         @include transition();
 
-        border-top: 1px solid $secondary;
-        border-left: 1px solid $secondary;
-        border-right: 1px solid $secondary;
+        border-top: 1px solid var(--secondary) !important;
+        border-left: 1px solid var(--secondary) !important;
+        border-right: 1px solid var(--secondary) !important;
       }
-      @include transition();
       &_active {
         background: var(--secondary-light);
-        color: var(--text-light);
+        color: var(--text-light) !important;
       }
       &-wrapper {
         @include flex();
-        margin: 0 95px 0 0;
+        margin: 0 85px 0 0;
       }
     }
+  }
+}
+
+@media (max-width: 1400px) {
+  .card:nth-child(3) {
+    margin: 0 0 24px 0;
   }
 }

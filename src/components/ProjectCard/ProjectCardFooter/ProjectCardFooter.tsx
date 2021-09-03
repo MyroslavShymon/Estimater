@@ -1,7 +1,7 @@
 import * as React from "react";
+import MyButton from "../../../components/UI/Button/MyButton";
+import MyCardFooter from "../../../components/UI/Card/CardFooter/MyCardFooter";
 import { default as classes } from "../ProjectCard.module.scss";
-import MyButton from "../../../../components/UI/Button/MyButton";
-import MyCardFooter from "../../../../components/UI/Card/CardFooter/MyCardFooter";
 
 // export interface ProjectCardFooterProps {
 

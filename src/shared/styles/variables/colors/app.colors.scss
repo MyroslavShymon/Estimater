@@ -14,7 +14,11 @@ $sidebar-link: linear-gradient(
   rgba(144, 111, 217, 0.16) 0%,
   rgba(178, 154, 233, 0) 100%
 );
-
+$dashboard-statistic: linear-gradient(
+  143.54deg,
+  rgba(144, 111, 217, 0.16) 1%,
+  rgba(178, 154, 233, 0) 100%
+);
 :root {
   --primary: #{$primary};
   --primary-background: #{$primary-background};
@@ -24,6 +28,7 @@ $sidebar-link: linear-gradient(
   --danger: #{$danger};
   --warning: #{$warning};
   --sidebar-link: #{$sidebar-link};
+  --dashboard-statistic: #{$dashboard-statistic};
 }
 
 :export {
@@ -35,6 +40,7 @@ $sidebar-link: linear-gradient(
   danger: $danger;
   warning: $warning;
   sidebar-link: $sidebar-link;
+  dashboard-statistic: $dashboard-statistic;
   //   primary: var(red);
   //   --redd: var(--sidebar-link);
 }

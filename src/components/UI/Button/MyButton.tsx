@@ -19,6 +19,7 @@ export interface MyButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   shadow?: boolean;
   borderRadius?: "sm" | "md" | "lg" | string;
   width?: "sm" | "md" | "lg" | string;
+  ref?: React.MutableRefObject<HTMLDivElement>;
   height?: "sm" | "md" | "lg" | string;
 }
 
@@ -43,23 +44,23 @@ const MyButton: React.FC<MyButtonProps> = memo(({ children, ...props }) => {
   classesResult.push(className);
   classesResult.push(classes["pure-material-button-contained"]);
 
-  useEffect(() => {
-    const addHoveredOn = () => {
-      MyDivRef.current.addEventListener("mouseover", () => {
-        MyDivRef.current.style.background = backgroundHover;
-        // MyDivRef.current.style.transitionDuration = "0.3";
-        // MyDivRef.current.style.transition = "0.5s all easy";
-      });
-    };
-    const addHoveredOut = () => {
-      MyDivRef.current.addEventListener("mouseout", () => {
-        MyDivRef.current.style.background = "transparent";
-        // MyDivRef.current.style.transitionDuration = "0.3";
-        // MyDivRef.current.setAttribute("style", "transition:0.5s all easy;");
+  const addHoveredOn = () => {
+    MyDivRef.current.addEventListener("mouseover", () => {
+      MyDivRef.current.style.background = backgroundHover;
+      // MyDivRef.current.style.transitionDuration = "0.3";
+      // MyDivRef.current.style.transition = "0.5s all easy";
+    });
+  };
+  const addHoveredOut = () => {
+    MyDivRef.current.addEventListener("mouseout", () => {
+      MyDivRef.current.style.background = "transparent";
+      // MyDivRef.current.style.transitionDuration = "0.3";
+      // MyDivRef.current.setAttribute("style", "transition:0.5s all easy;");
 
-        // MyDivRef.current.style.transition = "0.5s all easy";
-      });
-    };
+      // MyDivRef.current.style.transition = "0.5s all easy";
+    });
+  };
+  useEffect(() => {
     if (backgroundHover) {
       if (MyDivRef.current) {
         addHoveredOn();
@@ -67,10 +68,10 @@ const MyButton: React.FC<MyButtonProps> = memo(({ children, ...props }) => {
       }
     }
     return () => {
-      // if (MyDivRef.current) {
-      MyDivRef.current.removeEventListener("mouseover", addHoveredOn);
-      MyDivRef.current.removeEventListener("mouseout", addHoveredOut);
-      // }
+      if (MyDivRef.current) {
+        MyDivRef.current.removeEventListener("mouseover", addHoveredOn);
+        MyDivRef.current.removeEventListener("mouseout", addHoveredOut);
+      }
     };
   }, []);
 

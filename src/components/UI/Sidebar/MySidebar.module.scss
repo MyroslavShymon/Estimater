@@ -4,8 +4,9 @@
   background: var(--primary);
   position: fixed;
   top: 0;
-  grid-area: navbar;
+  // grid-area: navbar;
   height: 100%;
   width: 230px;
+  transition: left 0.23s;
   //TODO add dynamic change var for width
 }
