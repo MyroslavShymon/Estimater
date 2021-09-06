@@ -15,6 +15,7 @@ const HeaderUser: React.FC = () => {
             className={classes["user__icon"]}
             src={headerIcon.icon}
             alt={headerIcon.alt}
+            key={headerIcon.alt}
           />
         ))}
       </div>

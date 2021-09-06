@@ -17,8 +17,9 @@ interface CssExports {
   'secondary-light': string;
   'sidebar': string;
   'sidebar-link': string;
+  'sidebar__closed': string;
   'sidebar__link_active': string;
-  'sidebar_open': string;
+  'sidebar__open': string;
   'success': string;
   'text-dark-grey': string;
   'text-light': string;

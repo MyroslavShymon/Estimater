@@ -1,7 +1,14 @@
 .sidebar {
-  left: -230px;
-  &_open {
+  left: -175px;
+  &__open {
     left: 0;
+  }
+  &__closed {
+    @include flex(
+      $justify: flex-end,
+      $align: space-between,
+      $direction: column
+    );
   }
   &__link_active {
     div {

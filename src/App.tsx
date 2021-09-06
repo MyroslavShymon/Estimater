@@ -10,7 +10,7 @@ const App: React.FC = () => {
   const [opened, setOpened] = useState(false);
 
   const toggleShow = useCallback((opened) => {
-    setOpened(!opened);
+    setOpened(opened);
   }, []);
 
   return (

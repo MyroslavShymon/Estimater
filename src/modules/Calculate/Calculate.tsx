@@ -7,10 +7,6 @@ import MyButton from "../../components/UI/Button/MyButton";
 import { theme } from "../../shared/constants/theme";
 
 // export interface CalculateProps {}<CalculateProps>
-console.log("====================================");
-console.log(theme["color-green"]);
-console.log("====================================");
-
 const Calculate: React.FC = () => {
   return (
     <div className={style.page}>
@@ -20,19 +16,58 @@ const Calculate: React.FC = () => {
           +Add new project
         </MyButton>
         <div className={classes["calculate__projects-wrapper"]}>
-          <ProjectCard background={theme["color-green"]} />
-          <ProjectCard background={theme["color-grey"]} />
-          <ProjectCard background={theme["color-red"]} />
-          <ProjectCard background={theme["color-white"]} />
-          <ProjectCard background={theme["color-yellow"]} />
-          <ProjectCard background={theme["color-violet"]} />
-          <ProjectCard background={theme["color-orange"]} />
-          <ProjectCard background={theme["color-pink"]} />
-          <ProjectCard background={theme["color-red"]} />
-          <ProjectCard background={theme["color-white"]} />
-          <ProjectCard background={theme["color-yellow"]} />
-          <ProjectCard background={theme["color-violet"]} />
-          <ProjectCard background={theme["color-pink"]} />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-green"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-grey"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-red"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-white"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-yellow"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-violet"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-orange"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-pink"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-red"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-white"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-yellow"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-violet"]}
+          />
+          <ProjectCard
+            className={classes.calculate__card}
+            background={theme["color-pink"]}
+          />
         </div>
       </div>
     </div>

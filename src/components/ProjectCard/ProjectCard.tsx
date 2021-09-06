@@ -5,16 +5,18 @@ import ProjectCardBody from "./ProjectCardBody/ProjectCardBody";
 import ProjectCardFooter from "./ProjectCardFooter/ProjectCardFooter";
 import MyCard from "../UI/Card/MyCard";
 
-export interface ProjectCardProps {
+export interface ProjectCardProps
+  extends React.AllHTMLAttributes<HTMLDivElement> {
   background?: string;
+  props?: unknown;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ background }) => {
-  console.log("====================================");
-  console.log("background", background);
-  console.log("====================================");
+const ProjectCard: React.FC<ProjectCardProps> = ({ background, ...props }) => {
   return (
-    <MyCard style={{ background }} className={classes.card}>
+    <MyCard
+      style={{ background }}
+      className={[classes.card, props.className].join(" ")}
+    >
       <ProjectCardHeader />
       <ProjectCardBody />
       <ProjectCardFooter />

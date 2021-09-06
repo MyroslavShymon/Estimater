@@ -1,0 +1,13 @@
+.item {
+  &:hover {
+    @include transition();
+    background: var(--secondary-light);
+  }
+  &_mini {
+    padding: 0;
+    min-width: 55px;
+  }
+  &-img {
+    max-width: 25px;
+  }
+}

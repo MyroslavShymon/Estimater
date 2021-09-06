@@ -1,9 +1,9 @@
 .card {
-  margin: 0 24px 24px 0;
+  margin: 0 14px 14px 0;
   white-space: nowrap;
-  &:nth-child(4n) {
-    margin: 0 0 24px 0;
-  }
+  // &:nth-child(4n) {
+  //   margin: 0 0 14px 0;
+  // }
   &__header {
     justify-content: space-between !important;
   }
@@ -92,7 +92,7 @@
 }
 
 @media (max-width: 1400px) {
-  .card:nth-child(3) {
-    margin: 0 0 24px 0;
+  .card:nth-child(4) {
+    margin: 0 14px 14px 0;
   }
 }

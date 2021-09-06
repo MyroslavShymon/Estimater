@@ -1,12 +1,17 @@
 .calculate {
-  @include flex($direction: column, $justify: flex-end);
-
+  @include flex($direction: column);
+  &__card {
+    margin: 0 14px 14px 0;
+    &:nth-child(4n) {
+      margin: 0 0 14px 0;
+    }
+  }
   &__button {
     color: var(--text-light);
     background-color: var(--secondary);
     position: sticky;
     border-radius: 16px;
-    margin: 17px 0;
+    margin: 0 0 17px 0;
     top: 10px;
     z-index: 2;
   }

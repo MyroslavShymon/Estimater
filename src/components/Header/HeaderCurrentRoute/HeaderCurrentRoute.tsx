@@ -11,10 +11,6 @@ import { navigationItems } from "../../../shared/constants";
 const HeaderCurrentRoute: React.FC = () => {
   const history = useHistory();
 
-  console.log("====================================");
-  console.log(history);
-  console.log("====================================");
-
   return (
     <div className={classes["header__current-route"]}>
       {
