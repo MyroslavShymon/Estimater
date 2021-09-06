@@ -17,6 +17,7 @@ interface CssExports {
   'pure-material-button-contained': string;
   'secondary': string;
   'secondary-light': string;
+  'secondary-light-2': string;
   'sidebar-link': string;
   'success': string;
   'text-dark-grey': string;

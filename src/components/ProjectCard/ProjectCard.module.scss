@@ -26,6 +26,7 @@
   }
   &__title {
     font-size: $font-size-medium;
+    cursor: pointer;
   }
   &__action {
     &-wrapper {
@@ -65,7 +66,7 @@
     color: var(--text-primary-light-2);
   }
   &__footer {
-    padding: 40px 12px 0 !important;
+    padding: 24px 12px 0 !important;
     &-button {
       @include transition();
       // @include border-radius($top: 16px);

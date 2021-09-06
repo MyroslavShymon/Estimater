@@ -4,15 +4,23 @@ import Delete from "../../../assets/Delete.svg";
 import Bookmark from "../../../assets/Bookmark.svg";
 import MyCardHeader from "../../../components/UI/Card/CardHeader/MyCardHeader";
 import MyButton from "../../../components/UI/Button/MyButton";
+import { useHistory } from "react-router";
 
 // export interface ProjectCardHeaderProps {<ProjectCardHeaderProps>
 
 // }
 
 const ProjectCardHeader: React.FC = () => {
+  const history = useHistory();
+
   return (
     <MyCardHeader className={classes.card__header}>
-      <span className={classes.card__title}>Name 1 project</span>
+      <span
+        className={classes.card__title}
+        onClick={() => history.push(`/about`)}
+      >
+        Name 1 project
+      </span>
       <div className={classes["card__action-wrapper"]}>
         <MyButton
           shadow={false}

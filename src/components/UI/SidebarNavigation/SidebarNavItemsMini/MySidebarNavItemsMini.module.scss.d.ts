@@ -11,11 +11,14 @@ interface CssExports {
   'color-yellow': string;
   'danger': string;
   'dashboard-statistic': string;
-  'navbar': string;
+  'item': string;
+  'item-img': string;
+  'item_mini': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;
   'secondary-light': string;
+  'secondary-light-2': string;
   'sidebar-link': string;
   'success': string;
   'text-dark-grey': string;

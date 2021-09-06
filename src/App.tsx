@@ -7,14 +7,19 @@ import Sidebar from "./components/Sidebar/Sidebar";
 // export interface AppProps {}
 
 const App: React.FC = () => {
-  const [opened, setOpened] = useState(false);
+  const [opened, setOpened] = useState(true);
 
   const toggleShow = useCallback((opened) => {
     setOpened(opened);
   }, []);
 
   return (
-    <div className={classes.app}>
+    <div
+      className={classes.app}
+      onClick={() => {
+        toggleShow(false);
+      }}
+    >
       <BrowserRouter>
         {/* <Navbar /> */}
         <AppRouter />

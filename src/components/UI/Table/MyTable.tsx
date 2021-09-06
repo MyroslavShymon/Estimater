@@ -1,12 +1,24 @@
 import * as React from "react";
 import { default as classes } from "./MyTable.module.scss";
 
-export interface TableProps {
-  children: React.ReactNode;
+interface MyTableProps extends React.HTMLAttributes<HTMLTableElement> {
+  children?: React.ReactNode;
+  props?: unknown;
 }
 
-const Table: React.FC<TableProps> = ({ children }) => {
-  return <table className={classes.table}>{children}</table>;
+const MyTable: React.FC<MyTableProps> = ({ children, ...props }) => {
+  const classesResult: string[] = [];
+
+  const { className, ...extractedProps } = props;
+
+  classesResult.push(className);
+  classesResult.push(classes.table);
+
+  return (
+    <table {...extractedProps} className={classes.table}>
+      {children}
+    </table>
+  );
 };
 
-export default Table;
+export default MyTable;

@@ -15,6 +15,7 @@ interface CssExports {
   'primary-background': string;
   'secondary': string;
   'secondary-light': string;
+  'secondary-light-2': string;
   'sidebar': string;
   'sidebar-link': string;
   'sidebar__closed': string;

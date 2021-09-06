@@ -71,3 +71,17 @@ h6 {
 em {
   font-style: normal;
 }
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-spacing: 0;
+  -webkit-border-horizontal-spacing: 0;
+  -webkit-border-vertical-spacing: 0;
+}

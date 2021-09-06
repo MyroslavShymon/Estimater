@@ -6,6 +6,7 @@ $secondary-light: linear-gradient(
   rgba(144, 111, 217, 0.36) 0%,
   rgba(178, 154, 233, 0.44) 100%
 );
+$secondary-light-2: rgba(144, 111, 217, 0.48);
 $success: rgb(24, 199, 24);
 $danger: rgb(199, 24, 24);
 $warning: rgb(199, 103, 24);
@@ -24,6 +25,7 @@ $dashboard-statistic: linear-gradient(
   --primary-background: #{$primary-background};
   --secondary: #{$secondary};
   --secondary-light: #{$secondary-light};
+  --secondary-light-2: #{$secondary-light-2};
   --success: #{$success};
   --danger: #{$danger};
   --warning: #{$warning};
@@ -36,6 +38,7 @@ $dashboard-statistic: linear-gradient(
   primary-background: $primary-background;
   secondary: $secondary;
   secondary-light: $secondary-light;
+  secondary-light-2: $secondary-light-2;
   success: $success;
   danger: $danger;
   warning: $warning;

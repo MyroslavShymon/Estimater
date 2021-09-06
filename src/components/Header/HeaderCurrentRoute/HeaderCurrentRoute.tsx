@@ -1,22 +1,21 @@
 import * as React from "react";
 import { useHistory } from "react-router-dom";
 import { default as classes } from "../Header.module.scss";
-import { NavigationItemsType } from "../../../shared/types/types";
-import { navigationItems } from "../../../shared/constants";
+import { routers } from "../../../core/router";
+import { RouteType } from "../../../shared/types/types";
 
 // export interface HeaderCurrentRouteProps {
 
 // }<HeaderCurrentRouteProps>
-
 const HeaderCurrentRoute: React.FC = () => {
   const history = useHistory();
 
   return (
     <div className={classes["header__current-route"]}>
       {
-        navigationItems.find(
-          (navigationItem: NavigationItemsType) =>
-            navigationItem.link == history.location.pathname
+        routers.find(
+          (navigationItem: RouteType) =>
+            navigationItem.path == history.location.pathname
         ).data
       }
     </div>

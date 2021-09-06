@@ -1,7 +1,6 @@
 import React, { memo, useRef } from "react";
-import MySidebar from "../../components/UI/Sidebar/MySidebar";
+import MySidebar from "../../components/UI/SidebarNavigation/MySidebar";
 import { default as classes } from "./Sidebar.module.scss";
-import { navigationItems } from "../../shared/constants";
 import SidebarOpened from "./SidebarOpened/SidebarOpened";
 import SidebarClosed from "./SidebarClosed/SidebarClosed";
 // import MyButton from "../UI/Button/MyButton";
@@ -13,11 +12,11 @@ export interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ opened, toggleShow }) => {
-  const [sidebarNavItems, setSidebarNavItems] = React.useState(navigationItems);
   // const sidebarBlock = useRef<HTMLDivElement>();
 
   return (
     <MySidebar
+      onClick={(e) => e.stopPropagation()}
       className={
         opened
           ? `${classes.sidebar} ${classes.sidebar__open}`
@@ -25,15 +24,9 @@ const Sidebar: React.FC<SidebarProps> = ({ opened, toggleShow }) => {
       }
     >
       {opened ? (
-        <SidebarOpened
-          sidebarNavItems={sidebarNavItems}
-          toggleShow={toggleShow}
-        ></SidebarOpened>
+        <SidebarOpened toggleShow={toggleShow}></SidebarOpened>
       ) : (
-        <SidebarClosed
-          sidebarNavItems={sidebarNavItems}
-          toggleShow={toggleShow}
-        ></SidebarClosed>
+        <SidebarClosed toggleShow={toggleShow}></SidebarClosed>
       )}
     </MySidebar>
   );
