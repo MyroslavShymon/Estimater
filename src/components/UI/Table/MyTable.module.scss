@@ -1,7 +1,7 @@
 .table {
-  border: 1px solid var(--secondary);
   border-radius: 16px;
   text-align: center;
+  border-top: 1px solid var(--secondary);
   &__head {
     background: var(--secondary-light);
     &-row {
@@ -14,9 +14,11 @@
       }
       &:first-child {
         @include border-radius($top-left: 16px);
+        border-left: 1px solid var(--secondary);
       }
       &:last-child {
         @include border-radius($top-right: 16px);
+        border-right: 1px solid var(--secondary);
       }
     }
   }
@@ -30,6 +32,7 @@
       }
       &:last-child {
         td {
+          border-bottom: 1px solid var(--secondary);
           &:first-child {
             @include border-radius($bottom-left: 16px);
           }
@@ -41,6 +44,12 @@
     }
     &-cell {
       border-top: 1px solid var(--secondary-light-2);
+      &:first-child {
+        border-left: 1px solid var(--secondary);
+      }
+      &:last-child {
+        border-right: 1px solid var(--secondary);
+      }
     }
   }
   &__body-cell,
@@ -48,7 +57,24 @@
     padding: 16px;
     border-right: 1px solid var(--secondary);
     &:last-child {
-      border-right: none;
+      // border-right: none;
+    }
+  }
+  &__footer {
+    &-row {
+      font-weight: 600;
+      font-size: $font-size-large;
+      &:first-child {
+        td {
+          padding: 24px 0 0 0;
+        }
+      }
+      &:last-child {
+        color: $text-secondary;
+      }
+    }
+    &-cell {
+      padding: 16px 0 0 0;
     }
   }
 }

@@ -15,7 +15,7 @@ const MyTable: React.FC<MyTableProps> = ({ children, ...props }) => {
   classesResult.push(classes.table);
 
   return (
-    <table {...extractedProps} className={classes.table}>
+    <table {...extractedProps} className={classesResult.join(" ")}>
       {children}
     </table>
   );

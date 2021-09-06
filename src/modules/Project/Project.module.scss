@@ -1,0 +1,16 @@
+.projects {
+  width: 100%;
+  &-wrapper {
+    @include flex($direction: column);
+    width: 100%;
+  }
+  &__data {
+    padding: 0 0 32px 0;
+  }
+  &__button {
+    background: var(--secondary) !important;
+    color: var(--primary) !important;
+    width: 40%;
+    font-size: $font-size-medium !important;
+  }
+}
