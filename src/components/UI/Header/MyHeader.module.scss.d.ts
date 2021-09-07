@@ -12,6 +12,7 @@ interface CssExports {
   'danger': string;
   'dashboard-statistic': string;
   'header': string;
+  'modal-background': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;

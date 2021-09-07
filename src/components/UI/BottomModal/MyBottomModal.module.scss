@@ -1,0 +1,9 @@
+.modal {
+  background: var(--primary);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  right: 0;
+  @include flex($direction: column);
+}

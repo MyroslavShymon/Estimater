@@ -13,6 +13,7 @@ interface CssExports {
   'dashboard-statistic': string;
   'logo': string;
   'logo-wrapper': string;
+  'modal-background': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;

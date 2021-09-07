@@ -1,0 +1,13 @@
+.input {
+  background: yellow;
+  &-wrapper {
+    background: green;
+  }
+  &__text {
+    background: blue;
+
+    &-error {
+      background: red;
+    }
+  }
+}

@@ -14,6 +14,7 @@ interface CssExports {
   'item': string;
   'item-img': string;
   'item_mini': string;
+  'modal-background': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;

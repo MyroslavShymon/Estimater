@@ -11,6 +11,7 @@ interface CssExports {
   'color-yellow': string;
   'danger': string;
   'dashboard-statistic': string;
+  'modal-background': string;
   'navigationItem': string;
   'navigationItem__img': string;
   'primary': string;

@@ -1,25 +1,14 @@
 .modal {
   position: fixed;
+
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   display: none;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 2;
-  &-icon {
-    position: absolute;
-    top: -10px;
-    right: -5px;
-    cursor: pointer;
-  }
-  &-content {
-    @extend %border-radius;
-    @include shadow();
-    position: relative;
-    padding: 40px;
-    background-color: var(--primary);
-  }
+  background-color: var(--modal-background);
+  backdrop-filter: blur(16px);
+  z-index: 4;
 }
 .active {
   @include flex($align: center, $justify: center);

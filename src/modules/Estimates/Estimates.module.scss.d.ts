@@ -16,6 +16,7 @@ interface CssExports {
   'estimates__cards': string;
   'estimates__data': string;
   'estimates__title': string;
+  'modal-background': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;

@@ -1,6 +1,4 @@
 import * as React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import { default as classes } from "./MyModal.module.scss";
 
@@ -12,26 +10,15 @@ export interface MyModalProps {
 }
 
 const MyModal: React.FC<MyModalProps> = ({ setVisible, visible, children }) => {
-  const modalClasses = [classes.modal];
+  const classesResult: string[] = [classes.modal];
 
   if (visible) {
-    modalClasses.push(classes.active);
+    classesResult.push(classes.active);
   }
 
   return (
-    <div className={modalClasses.join(" ")} onClick={() => setVisible(false)}>
-      <div
-        className={classes["modal-content"]}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <FontAwesomeIcon
-          icon={faTimes}
-          size="lg"
-          className={classes["modal-icon"]}
-          onClick={() => setVisible(false)}
-        />
-        {children}
-      </div>
+    <div className={classesResult.join(" ")} onClick={() => setVisible(false)}>
+      {children}
     </div>
   );
 };

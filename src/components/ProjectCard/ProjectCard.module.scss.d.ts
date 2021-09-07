@@ -28,6 +28,7 @@ interface CssExports {
   'color-yellow': string;
   'danger': string;
   'dashboard-statistic': string;
+  'modal-background': string;
   'primary': string;
   'primary-background': string;
   'secondary': string;
