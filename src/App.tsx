@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 // export interface AppProps {}
 
 const App: React.FC = () => {
-  const [opened, setOpened] = useState(true);
+  const [opened, setOpened] = useState(false);
 
   const toggleShow = useCallback((opened) => {
     setOpened(opened);

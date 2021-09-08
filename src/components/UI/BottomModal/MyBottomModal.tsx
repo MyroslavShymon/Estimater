@@ -26,7 +26,6 @@ const MyBottomModal: React.FC<MyBottomModalProps> = ({
       className={classesResult.join(" ")}
       onClick={(e) => e.stopPropagation()}
     >
-      <button onClick={() => setVisible(false)}>cool button</button>
       {children}
     </div>
   );

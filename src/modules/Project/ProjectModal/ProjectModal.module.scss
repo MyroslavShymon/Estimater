@@ -1,0 +1,38 @@
+.modal {
+  @include border-radius($top: 16px);
+  border: 1px solid $secondary;
+  &-wrapper {
+    background: skyblue;
+  }
+  &__title {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: $font-size-xxLarge;
+  }
+  &__header {
+    // background: darkslateblue;
+    @include flex();
+    width: 100%;
+    padding: 18px 22.5px 0;
+  }
+  &__content {
+    @include flex($justify: space-between);
+    width: 100%;
+    padding: 24px 18px 59px;
+  }
+  &__inputs {
+    @include flex();
+  }
+  &__buttons {
+    @include flex();
+    // &-add{
+
+    // }
+    // &-cancel{
+
+    // }
+  }
+  &__close {
+    cursor: pointer;
+  }
+}

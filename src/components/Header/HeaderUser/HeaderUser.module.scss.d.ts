@@ -25,6 +25,7 @@ interface CssExports {
   'text-primary': string;
   'text-primary-light': string;
   'text-primary-light-2': string;
+  'text-primary-light-3': string;
   'text-secondary': string;
   'text-secondary-light': string;
   'user': string;

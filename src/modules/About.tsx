@@ -14,10 +14,7 @@ import MyFooter from "../components/UI/Table/Footer/MyFooter";
 import MyButton from "../components/UI/Button/MyButton";
 import MyFooterRow from "../components/UI/Table/Footer/MyFooterRow/MyFooterRow";
 import MyFooterCell from "../components/UI/Table/Footer/MyFooterCell/MyFooterCell";
-import { theme } from "../shared/constants/theme";
-import MyBottomModal from "../components/UI/BottomModal/MyBottomModal";
-import MyModal from "../components/UI/Modal/MyModal";
-import MyInputRounded from "../components/UI/InputRounded/MyInputRounded";
+import ProjectModal from "./Project/ProjectModal/ProjectModal";
 
 // export interface EstimateProps {
 
@@ -26,16 +23,6 @@ import MyInputRounded from "../components/UI/InputRounded/MyInputRounded";
 // const About: React.FC<EstimateProps> = () => {
 //     return ( <div>About</div> );
 // }
-
-const useInput = (initialValue = "") => {
-  const [value, setValue] = useState(initialValue);
-
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  return { value, onChange };
-};
 
 const tableData = [
   {
@@ -148,12 +135,7 @@ const About: React.FC = (): JSX.Element => {
     { id: 1, title: "Back-end", active: true },
     { id: 2, title: "App", active: false },
   ]);
-  const [bottomModalVisible, setBottomModalVisible] = useState(false);
-
-  const description = useInput();
-  const hourMin = useInput();
-  const hourMax = useInput();
-  const comments = useInput();
+  const [bottomModalVisible, setBottomModalVisible] = useState<boolean>(false);
 
   const scrollListener = () => {
     setFixButton(true);
@@ -179,42 +161,10 @@ const About: React.FC = (): JSX.Element => {
       </button> */}
       <Header />
       {bottomModalVisible && (
-        <MyModal
-          visible={bottomModalVisible}
-          setVisible={setBottomModalVisible}
-        >
-          <MyBottomModal setVisible={setBottomModalVisible}>
-            <h1>Add new row</h1>
-            <div>
-              <div>
-                <MyInputRounded
-                  title="Description"
-                  placeholder="Deep cache for cocktails and ingredients ( history update )"
-                  inputData={description}
-                ></MyInputRounded>
-                <MyInputRounded
-                  title=" Estimate (Hour) min"
-                  placeholder="Time here"
-                  inputData={hourMin}
-                ></MyInputRounded>
-                <MyInputRounded
-                  title=" Estimate max"
-                  placeholder="Time here"
-                  inputData={hourMax}
-                ></MyInputRounded>
-                <MyInputRounded
-                  title="Comments"
-                  placeholder="Text here"
-                  inputData={comments}
-                ></MyInputRounded>
-              </div>
-              <div>
-                <MyButton>Add</MyButton>
-                <MyButton>Cancel</MyButton>
-              </div>
-            </div>
-          </MyBottomModal>
-        </MyModal>
+        <ProjectModal
+          bottomModalVisible={bottomModalVisible}
+          setBottomModalVisible={setBottomModalVisible}
+        ></ProjectModal>
       )}
       <div className={classes["projects-wrapper"]}>
         <div className={classes.projects__data}>

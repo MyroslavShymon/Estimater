@@ -4,7 +4,7 @@ import { default as classes } from "./MyInputRounded.module.scss";
 interface MyInputRoundedProps {
   //   value: string;
   //   setValue: React.Dispatch<React.SetStateAction<string | number>>;
-  inputData: any;
+  inputData: any; //TODO fix
   placeholder: string;
   title: string;
 }
@@ -16,7 +16,7 @@ const MyInputRounded: React.FC<MyInputRoundedProps> = ({
 }) => {
   return (
     <div className={classes["input-wrapper"]}>
-      <div className={classes.input__text}>{title}</div>
+      <label className={classes.input__text}>{title}</label>
       <input
         type="text"
         className={classes.input}
