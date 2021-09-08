@@ -17,11 +17,11 @@
       font-size: var(--font-size-default);
       transition: color 0.25s ease-in-out;
     }
-    + .input__text {
-      color: red;
-      //   color: var(--secondary-light-3);
-      transition: color 0.25s ease-in-out;
-    }
+    // + .input__text {
+    //   color: red;
+    //   //   color: var(--secondary-light-3);
+    //   transition: color 0.25s ease-in-out;
+    // } //TODO fix active label
   }
   //   &:focus-within {
   //     .input__text {
